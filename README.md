@@ -65,7 +65,7 @@ Directives
 
 Provided are the directives:
 
-- **expect** - `qitoo::expect` works similar to the qi expect operator >. Other than the qi operator the qitoo expect
+- **expect** - `qitoo::expect` works similar to the qi expect operator >. See [documentation here](http://www.boost.org/doc/libs/1_61_0/libs/spirit/doc/html/spirit/qi/reference/operator/expect.html) here. Other than the qi operator the qitoo expect
   directive throws an exception even if the first operand fails. Usage:
 
        
@@ -74,7 +74,7 @@ Provided are the directives:
 
 
 
-- **probe** - `qitoo::probe` works exactly as `qi::hold`. Other than `qi::hold` does `qitoo::probe` not require to
+- **probe** - `qitoo::probe` works exactly as `qi::hold`. See [documentation here](http://www.boost.org/doc/libs/1_61_0/libs/spirit/doc/html/spirit/qi/reference/directive/hold.html) here.O ther than `qi::hold` does `qitoo::probe` not require to
   implement swap for the ast containers. This convenience gets payed for with runtime and possibly increased buffering
   requirements, because `probe` does lookahead parsing to work. Usage:
 
@@ -89,7 +89,7 @@ Provided are the directives:
 
         parser-expression >> qitoo::probe[parser-expression] >> ...
 
- will work as expected.        
+ will work as expected without having taking care about that 'temporaray' type and how to swap it..        
 
 
 Operators

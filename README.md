@@ -83,8 +83,14 @@ Provided are the directives:
        
   
   Note: One important design goal of `spirit::qi` is speed. Keep in mind, that `probe` parses twice if successful, so
-  take care not to apply it to parser-expressions which consume MB of input.
+  take care not to apply it to parser-expressions if it can consume MB of input. An advantage of 'qitoo::probe'  over
+  `qi::hold` is that it can be applied to temporaries, so 
  
+
+        parser-expression >> qitoo::probe[parser-expression] >> ...
+
+ will work as expected.        
+
 
 Operators
 -------
@@ -103,8 +109,6 @@ Operators
 
 Given an input of ```ident1::ident2``` qualified_id matches providing the result ```ident1::ident2```.
 Given an input of ```ident1``` qualified_id matches providing the result ```ident1```.
-        
-
 
 License
 -------

@@ -58,7 +58,7 @@ As spirit::qi qitoo is a header only collection of parsers.
         // just to show 
         qi::rule<iterator_type, result_type(), skipper_type> rule = qi::raw["X"] >> qitoo::probe[id];        
        
-	      
+2. Please have a look at the provided examples which supplement this small documentation.      
 
 Directives
 -------
@@ -100,6 +100,9 @@ Operators
         
         id = (qi::alpha | qi::char_('_')) >> *(qi::alnum | qi::char_('_'));
         qualified_id = id += qi::string("::");
+
+Given an input of ```ident1::ident2``` qualified_id matches providing the result ```ident1::ident2```.
+Given an input of ```ident1``` qualified_id matches providing the result ```ident1```.
         
 
 

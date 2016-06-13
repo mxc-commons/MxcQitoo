@@ -96,7 +96,7 @@ Operators
 -------
 
   
-- **operator +=** - This operator acts like the `qi::operator %`, but the right hand side operand contributes to the attribute vector also.
+- **operator +=** - This operator acts like the `qi::operator %`, [see documentation here] (http://www.boost.org/doc/libs/1_61_0/libs/spirit/doc/html/spirit/qi/reference/operator/list.html) but the right hand side operand contributes to the attribute vector also.
   `qi::operator %` discards the rhs operand's attribute.  `id % char_(';,')]` does the same as `id += qi::omit[char_(';,')]`
 
   Note: `qitoo::operator +=` needs to lookahead both operands to detect if the list continues and to make sure, that the returned attribute is

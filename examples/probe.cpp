@@ -65,10 +65,11 @@ int main() {
         , "probe[id >> ',' >> id] "
         , qitoo::probe[id >> ',' >> id]);
 
+
     parse("probe fail, two comma separated ids"
         , "id1, 1234 "
         , "probe[id >> ',' >> id] >> id >> ',' >> qi::uint_"
-        , qitoo::probe[id >> ',' >> id] >> id >> ',' >> qi::uint_);
+        , qitoo::probe[id >> ',' >> id]);
     
     return 0;
 }

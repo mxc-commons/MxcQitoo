@@ -58,7 +58,7 @@ As spirit::qi qitoo is a header only collection of parsers.
         // just to show 
         qi::rule<iterator_type, result_type(), skipper_type> rule = qi::raw["X"] >> qitoo::probe[id];        
        
-2. Please have a look at the provided examples which supplement this small documentation.      
+2. Please have a look at the provided examples which supplement this small documentation.       
 
 Directives
 -------
@@ -75,8 +75,8 @@ Provided are the directives:
 
 
 - **probe** - `qitoo::probe` works exactly as `qi::hold`. Other than `qi::hold` does `qitoo::probe` not require to
-  implement swap for the ast containers. This convenience gets payed for with runtime, because `probe` does lookahead
-  parsing to work. Usage:
+  implement swap for the ast containers. This convenience gets payed for with runtime and possibly increased buffering
+  requirements, because `probe` does lookahead parsing to work. Usage:
 
        
         qitoo::probe[parser-expression]        
@@ -94,8 +94,8 @@ Operators
   `qi::operator %` discards the rhs operand's attribute.  `id % char_(';,')]` does the same as `id += qi::omit[char_(';,')]`
 
   Note: `qitoo::operator +=` needs to lookahead both operands to detect if the list continues and to make sure, that the returned attribute is
-  not polluted with temporary results. 
-
+  not polluted with temporary results. Consider runtime effects and increased buffering requirements. For tasks like the following this is
+  not relevant, but if you take a serious long string of thousands of chars it would be. 
 
         
         id = (qi::alpha | qi::char_('_')) >> *(qi::alnum | qi::char_('_'));

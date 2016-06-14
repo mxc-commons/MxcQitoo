@@ -2,7 +2,10 @@ MxcQitoo
 =============
 Version 1.0.0 created by Frank Hein and the mxc-commons team.
 
-MxcQitoo is part of the maxence openBeee initiative by [maxence business consulting gmbh, Germany](http://www.maxence.de). 
+MxcQitoo provides some additional parser components for the Boost-Spirit-Qi (currently v2.5.2) parser library.
+[Boost Spirit Qi documentation](http://www.boost.org/doc/libs/1_61_0/libs/spirit/doc/html/index.html) can be found here.
+
+MxcQitoo is part of the maxence Open Source initiative by [maxence business consulting gmbh, Germany](http://www.maxence.de). 
 
 Introduction
 ------------
@@ -10,12 +13,6 @@ Introduction
 Spirit is a set of C++ libraries for parsing and output generation implemented as Domain Specific Embedded Languages (DSEL) using Expression templates and Template Meta-Programming. The Spirit libraries enable a target grammar to be written exclusively in C++. Inline grammar specifications can mix freely with other C++ code and, thanks to the generative power of C++ templates, are immediately executable.
 
 Spirit is part of [Boost C++ Libraries](http://www.boost.org), a peer-reviewed, open collaborative development effort.
-
-MxcQitoo provides some additional parser components for the Boost-Spirit-Qi (currently v2.5.2) parser library.
-[Boost Spirit Qi documentation](http://www.boost.org/doc/libs/1_61_0/libs/spirit/doc/html/index.html) can be found here.
-
-
-MxcQitoo parser objects live in the namespace `mxc::qitoo` (reads qi, too ;)
 
 Requirements
 ------------
@@ -41,8 +38,8 @@ As spirit::qi qitoo is a header only collection of parsers.
 #### Cloning project
 
 1. Clone this project to a location you want. 
-2. Add the `qitoo` directory to your include path.
-3. The examples directory contains what it says.
+2. Add the `mxc` directory to your include path.
+3. Directory organisation just like Boost directory organisation
 
 
 #### Post installation
@@ -119,4 +116,4 @@ file LICENSE.txt).
 Acknowledgements
 ----------------
 
-Boost Spirit would not be here for us without the work of [Joel de Guzman, Hartmut Kaiser and many other developers](http://boost-spirit.com/home/people/).  
+Boost Spirit relies on the contributions of [Joel de Guzman, Hartmut Kaiser and many other developers](http://boost-spirit.com/home/people/).  

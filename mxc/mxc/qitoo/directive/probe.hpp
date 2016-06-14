@@ -100,6 +100,10 @@ namespace boost {  namespace spirit {
         template <typename Subject>
         struct has_semantic_action<mxc::qitoo::probe_directive<Subject> >
             : unary_has_semantic_action<Subject> {};
+        ///////////////////////////////////////////////////////////////////////////
+        template <typename Subject, typename Attribute, typename Context, typename Iterator>
+        struct handles_container<mxc::qitoo::probe_directive<Subject>, Attribute, Context, Iterator> 
+            : unary_handles_container<Subject, Attribute, Context, Iterator> {};
     }
 }}
 

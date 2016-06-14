@@ -30,7 +30,7 @@ namespace boost { namespace spirit {
 	// Enablers
 	///////////////////////////////////////////////////////////////////////////
 	template <>
-	struct use_operator<qi::domain, proto::tag::plus_assign> // enables p += d
+	struct use_operator<qi::domain, proto::tag::divides> // enables p / d
 		: mpl::true_ {};
 }}
 
@@ -115,7 +115,7 @@ namespace boost { namespace spirit {
 		// Parser generators: make_xxx function (objects)
 		///////////////////////////////////////////////////////////////////////////
 		template <typename Elements, typename Modifiers>
-		struct make_composite<proto::tag::plus_assign, Elements, Modifiers>
+		struct make_composite<proto::tag::divides, Elements, Modifiers>
 			: make_binary_composite<Elements, mxc::qitoo::list2>
 		{};
 	}

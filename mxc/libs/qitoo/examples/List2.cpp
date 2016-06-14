@@ -63,17 +63,17 @@ int main() {
     parse("Modulus-Assign Operator (+=), list with several different 'delimiters'\nExosing the 'delimiters'"
         , "item1, item2, item3; item 4"
         , "id += qi::char_(\";,\"))"
-        , id += qi::char_(";,"));
+        , id / qi::char_(";,"));
 
     parse("Modulus-Assign Operator (+=), list with several different 'delimiters'\nUsing omit, same as qi::%"
         , "item1, item2, item3; item 4"
         , "id += qi::omit[qi::char_(\";,\"))]"
-        , id += qi::omit[qi::char_(";,")]);
+        , id / qi::omit[qi::char_(";,")]);
 
     parse("Modulus-Assign Operator (+=), Simple and namespace qualified ids"
         , "id1::id2::id3::id4"
         , "id += qi::string(\"::\")"
-        , id += qi::string("::"));
+        , id / qi::string("::"));
 
     return 0;
 }

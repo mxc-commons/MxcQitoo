@@ -70,7 +70,7 @@ namespace grammars {
         using qi::fail;
 
         id = (qi::alpha | qi::char_('_')) >> *(qi::alnum | qi::char_('_'));
-        qualified_id = id += qi::string("::");
+        qualified_id = id / qi::string("::");
 
         id_list = qitoo::expect[id >> qi::lit(';')];
 

@@ -93,16 +93,16 @@ Operators
 -------
 
   
-- **operator +=** - This operator acts like the `qi::operator %`, [see documentation here] (http://www.boost.org/doc/libs/1_61_0/libs/spirit/doc/html/spirit/qi/reference/operator/list.html) but the right hand side operand contributes to the attribute vector also.
-  `qi::operator %` discards the rhs operand's attribute.  `id % char_(';,')]` does the same as `id += qi::omit[char_(';,')]`
+- **operator /** - This operator acts like the `qi::operator %`, [see documentation here] (http://www.boost.org/doc/libs/1_61_0/libs/spirit/doc/html/spirit/qi/reference/operator/list.html) but the right hand side operand contributes to the attribute vector also.
+  `qi::operator %` discards the rhs operand's attribute.  `id % char_(';,')]` does the same as `id / qi::omit[char_(';,')]`
 
-  Note: `qitoo::operator +=` needs to lookahead both operands to detect if the list continues and to make sure, that the returned attribute is
+  Note: `qitoo::operator /` needs to lookahead both operands to detect if the list continues and to make sure, that the returned attribute is
   not polluted with temporary results. Consider runtime effects and increased buffering requirements. For tasks like the following this is
   not relevant, but if you take a serious long string of thousands of chars it would be. 
 
         
         id = (qi::alpha | qi::char_('_')) >> *(qi::alnum | qi::char_('_'));
-        qualified_id = id += qi::string("::");
+        qualified_id = id / qi::string("::");
 
 Given an input of ```ident1::ident2``` qualified_id matches providing the result ```ident1::ident2```.
 Given an input of ```ident1``` qualified_id matches providing the result ```ident1```.

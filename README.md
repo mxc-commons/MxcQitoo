@@ -46,7 +46,7 @@ As spirit::qi qitoo is a header only collection of parsers.
 
 1. MxcQitoo parser objects live in the namespace `mxc::qitoo` (reads qi, too ;). Use like
  
-        #include <qitoo.qitoo.hpp>
+        #include <mxc/qitoo/qitoo.hpp>
         #include <boost/spirit/home/qi.hpp>
 
         namespace qitoo=mxc::qitoo; 

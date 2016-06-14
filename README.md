@@ -116,4 +116,4 @@ file LICENSE.txt).
 Acknowledgements
 ----------------
 
-Boost Spirit relies on the contributions of [Joel de Guzman, Hartmut Kaiser and many other developers](http://boost-spirit.com/home/people/).  
+This work relies on Boost Spirit, which lives because of the tremendous amount of time and effort spent by [Joel de Guzman, Hartmut Kaiser and many other developers](http://boost-spirit.com/home/people/) who made Spirit happen.  

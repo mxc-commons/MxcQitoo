@@ -55,22 +55,22 @@ int main() {
      qi::rule < iterator_type, std::string(), qi::space_type>
         id = (qi::alpha | qi::char_('_')) >> *(qi::alnum | qi::char_('_'));
 
-    parse("Modulus-Assign Operator (%), list with several different 'delimiters'  "
+    parse("Modulus Operator (%), list with several different 'delimiters'  "
         , "item1, item2, item3; item 4"
         , "id  % qi::char_(\";,\"))"
         , id % qi::char_(";,"));
 
-    parse("Modulus-Assign Operator (+=), list with several different 'delimiters'\nExosing the 'delimiters'"
+    parse("Divides Operator (/), list with several different 'delimiters'\nExosing the 'delimiters'"
         , "item1, item2, item3; item 4"
         , "id += qi::char_(\";,\"))"
         , id / qi::char_(";,"));
 
-    parse("Modulus-Assign Operator (+=), list with several different 'delimiters'\nUsing omit, same as qi::%"
+    parse("Divides Operator (/), list with several different 'delimiters'\nUsing omit, same as qi::%"
         , "item1, item2, item3; item 4"
         , "id += qi::omit[qi::char_(\";,\"))]"
         , id / qi::omit[qi::char_(";,")]);
 
-    parse("Modulus-Assign Operator (+=), Simple and namespace qualified ids"
+    parse("Divides Operator (/), Simple and namespace qualified ids"
         , "id1::id2::id3::id4"
         , "id += qi::string(\"::\")"
         , id / qi::string("::"));

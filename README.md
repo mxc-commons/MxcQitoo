@@ -68,7 +68,7 @@ Provided are the directives:
        
         qitoo::expect[parser-expression]        
        
-
+  Note: With Boost::Spirit v2.5.4 the expect directive was integrated into qi (see https://github.com/boostorg/spirit/pull/196).   
 
 
 - **probe** - `qitoo::probe` works exactly as `qi::hold`. See [documentation here](http://www.boost.org/doc/libs/1_61_0/libs/spirit/doc/html/spirit/qi/reference/directive/hold.html) here.O ther than `qi::hold` does `qitoo::probe` not require to

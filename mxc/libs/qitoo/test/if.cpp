@@ -6,13 +6,7 @@ file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 =============================================================================*/
 
 #include <boost/detail/lightweight_test.hpp>
-#include <boost/spirit/include/qi_operator.hpp>
-#include <boost/spirit/include/qi_char.hpp>
-#include <boost/spirit/include/qi_grammar.hpp>
-#include <boost/spirit/include/qi_rule.hpp>
-#include <boost/spirit/include/qi_string.hpp>
-#include <boost/spirit/include/qi_directive.hpp>
-#include <mxc/qitoo/function/if.hpp>
+#include <mxc/qitoo/qitoo.hpp>
 
 #include <string>
 #include <iostream>
@@ -20,7 +14,6 @@ file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 #include "test.hpp"
 
 int main() {
-
     using mxc::qitoo::if_;
     namespace qi = boost::spirit::qi;
     using namespace boost::spirit::qi;

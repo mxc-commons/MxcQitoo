@@ -1,6 +1,6 @@
 MxcQitoo
 =============
-Version 1.0.1 created by Frank Hein and the mxc-commons team.
+Version 1.0.2 created by Frank Hein and the mxc-commons team.
 
 MxcQitoo provides some additional parser components for the Boost-Spirit-Qi (currently v2.5.2) parser library.
 [Boost Spirit Qi documentation](http://www.boost.org/doc/libs/1_61_0/libs/spirit/doc/html/index.html) can be found here.
@@ -47,15 +47,16 @@ As spirit::qi qitoo is a header only collection of parsers.
 1. MxcQitoo parser objects live in the namespace `mxc::qitoo` (reads qi, too ;). Use like
  
         #include <mxc/qitoo/qitoo.hpp>
-        #include <boost/spirit/home/qi.hpp>
-
+        
         namespace qitoo=mxc::qitoo; 
         namespace qi = boost::spirit::qi;
         
         // just to show 
         qi::rule<iterator_type, result_type(), skipper_type> rule = qi::raw["X"] >> qitoo::probe[id];        
-       
-2. Please have a look at the provided examples which supplement this small documentation.       
+
+2. Spirit::Qi headers get included by qitoo.hpp automatically.       
+
+3. Please have a look at the provided examples which supplement this small documentation.       
 
 Directives
 -------

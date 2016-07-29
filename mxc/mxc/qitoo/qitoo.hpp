@@ -13,10 +13,13 @@
 
 #include <mxc/qitoo/support/make_component.hpp>
 #include <mxc/qitoo/support/meta_compiler.hpp>
+#include <boost/spirit/home/qi.hpp>
 
 #include <mxc/qitoo/operator/list2.hpp>
+
 #include <mxc/qitoo/directive/expect.hpp>
 #include <mxc/qitoo/directive/probe.hpp>
+
 #include <mxc/qitoo/function/if.hpp>
 
 #endif

@@ -107,6 +107,13 @@ Operators
 Given an input of ```ident1::ident2``` qualified_id matches providing the result ```ident1::ident2```.
 Given an input of ```ident1``` qualified_id matches providing the result ```ident1```.
 
+Functions
+-------
+
+MxcQitoo supports named n-ary operators. These operators use a function style syntax `op(p1, ...)`, where `op` is the named operator, and `p1, ...` are parser expressions.
+
+- **function if_**: This implements a ternary conditional operator (thus taking 3 arguments). Syntax is `if_(condition, if, else)` where `condition`, `if` and `else` are parser expressions. Attribute type of `if_` is a boost::variant of `if` and `else` attributes. The `condition` parser does not contribute to the attribute. See if.cpp in the test directory for examples on how to use it. 
+
 License
 -------
 

@@ -5,6 +5,7 @@
     Distributed under the Boost Software License, Version 1.0. (See accompanying
     file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 =============================================================================*/
+
 #include <boost/detail/lightweight_test.hpp>
 #include <boost/spirit/include/qi_operator.hpp>
 #include <boost/spirit/include/qi_char.hpp>
@@ -31,6 +32,7 @@ main()
 {
     using namespace boost::spirit;
     using namespace boost::spirit::ascii;
+    using mxc::qitoo::expect;
     using spirit_test::test;
     using spirit_test::print_info;
     using boost::spirit::qi::expectation_failure;

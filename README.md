@@ -1,6 +1,6 @@
 MxcQitoo
 =============
-Version 1.0.0 created by Frank Hein and the mxc-commons team.
+Version 1.0.1 created by Frank Hein and the mxc-commons team.
 
 MxcQitoo provides some additional parser components for the Boost-Spirit-Qi (currently v2.5.2) parser library.
 [Boost Spirit Qi documentation](http://www.boost.org/doc/libs/1_61_0/libs/spirit/doc/html/index.html) can be found here.
